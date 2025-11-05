@@ -1,0 +1,43 @@
+/* Modern minimal styling for under construction template */
+body {
+  background: #f4f7fa;
+  color: #222;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(10,50,120,0.08), 0 1.5px 4px rgba(0,0,0,0.03);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem;
+  max-width: 420px;
+  width: 90vw;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+p {
+  color: #474d57;
+  font-size: 1.13rem;
+  margin-bottom: 2rem;
+}
+
+.placeholder {
+  background: linear-gradient(90deg, #d8e6f7 30%, #e9eaf0 100%);
+  border-radius: 10px;
+  color: #6f7683;
+  padding: 1.1rem;
+  font-size: 0.98rem;
+  font-family: monospace;
+}
