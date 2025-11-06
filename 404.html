@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found — Cynic Cafe</title>
+  <meta name="description" content="The page you are looking for doesn't exist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Cynic Cafe Home">Cynic Cafe</a>
+    </div>
+  </header>
+
+  <main class="site-main" role="main">
+    <section class="hero-section" aria-labelledby="notfound-title">
+      <div class="container">
+        <h1 id="notfound-title">404 — Page not found</h1>
+        <p class="lead">Sorry, we couldn’t find that page. It may have been moved, renamed, or no longer exists.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="/">Go to Homepage</a>
+          <a class="button-secondary" href="https://www.cyniccafe.top/">Visit www.cyniccafe.top</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="help-title">
+      <div class="container">
+        <h2 id="help-title">Need help?</h2>
+        <p>Try checking the URL for typos, or use the navigation on the homepage to find what you’re after.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© <span id="year"></span> Cynic Cafe</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
