@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cynic Cafe</title>
+  <meta name="description" content="Personal homepage for Cynic Cafe" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="#home" aria-label="Cynic Cafe Home">Cynic Cafe</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="site-main" role="main">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Welcome to Cynic Cafe</h1>
+        <p class="lead">Personal homepage. Simple, fast, and accessible.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="#gallery">View Gallery</a>
+          <a class="button-secondary" href="#news">Latest Updates</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="content-section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">Media Gallery</h2>
+        <p>Optimized images will appear here.</p>
+        <div class="gallery-grid" role="list" aria-label="Image gallery">
+          <!-- Add images to images/gallery/ and reference here -->
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="content-section" aria-labelledby="news-title">
+      <div class="container">
+        <h2 id="news-title">News & Updates</h2>
+        <article class="news-item" aria-labelledby="n1-title">
+          <h3 id="n1-title">Site initialized</h3>
+          <p><time datetime="2025-11-05">Nov 5, 2025</time> — First version of the static homepage.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="links" class="content-section" aria-labelledby="links-title">
+      <div class="container">
+        <h2 id="links-title">Links</h2>
+        <ul class="link-list">
+          <li>
+            <a href="http://dashy.cyniccafe.top" target="_blank" rel="noopener noreferrer">Internal Dashy</a>
+            <span class="note">Requires Tailscale VPN (split DNS)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <p>Find me on <a href="https://github.com/dagon575" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© <span id="year"></span> Cynic Cafe</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

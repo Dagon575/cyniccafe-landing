@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.windsurf/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Env
+.env
