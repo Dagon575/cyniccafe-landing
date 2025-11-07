@@ -29,6 +29,9 @@ body{
 img{max-width:100%;display:block}
 a{color:var(--color-accent);text-decoration:none}
 a:hover{text-decoration:underline}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:var(--space-4);top:var(--space-4);width:auto;height:auto;padding:.5rem .75rem;background:var(--color-accent);color:#08101f;border-radius:.5rem;z-index:1000;box-shadow:var(--shadow-2)}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
 
 .container{max-width:var(--max-w);margin-inline:auto;padding:0 var(--space-4)}
 
@@ -67,6 +70,18 @@ a:hover{text-decoration:underline}
 }
 @media (min-width: 64rem){
   .gallery-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+@media (prefers-color-scheme: light){
+  :root{
+    --color-bg:#f8fafc;
+    --color-surface:#ffffff;
+    --color-text:#0b0f14;
+    --color-muted:#475569;
+    --color-accent:#335dff;
+  }
+  body{background:linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%)}
+  .button-primary{color:#ffffff}
 }
 
 .site-footer{padding:2rem 0;color:var(--color-muted)}
