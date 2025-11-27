@@ -48,9 +48,13 @@ a:hover{text-decoration:underline}
 
 .hero-section{
   padding: clamp(3rem, 8vw, 6rem) 0;
-  background:
+  background-image:
     radial-gradient(1200px 1200px at 20% -10%, rgba(124,156,255,.12), transparent 70%),
-    radial-gradient(1000px 1000px at 80% 0%, rgba(124,156,255,.08), transparent 70%);
+    radial-gradient(1000px 1000px at 80% 0%, rgba(124,156,255,.08), transparent 70%),
+    url("images/media/CyniccafeWallpaper.png");
+  background-size: auto, auto, cover;
+  background-position: 20% -10%, 80% 0%, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .hero-section .lead{color:var(--color-muted);max-width:50ch}
 .hero-actions{display:flex;gap:var(--space-3);margin-top:var(--space-4);flex-wrap:wrap}
