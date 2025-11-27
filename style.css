@@ -55,6 +55,7 @@ a:hover{text-decoration:underline}
   background-size: auto, auto, cover;
   background-position: 20% -10%, 80% 0%, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
+  min-height: 60vh;
 }
 .hero-section .lead{color:var(--color-muted);max-width:50ch}
 .hero-actions{display:flex;gap:var(--space-3);margin-top:var(--space-4);flex-wrap:wrap}
