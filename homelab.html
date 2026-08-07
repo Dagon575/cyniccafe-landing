@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What I run &mdash; Cynic Cafe</title>
+    <meta
+      name="description"
+      content="A categorized overview of the self-hosted services behind Cynic Cafe."
+    />
+    <link rel="canonical" href="https://www.cyniccafe.top/homelab.html" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta name="color-scheme" content="dark light" />
+    <link
+      rel="icon"
+      href="/assets/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:site_name" content="Cynic Cafe" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.cyniccafe.top/homelab.html" />
+    <meta property="og:title" content="What I run — Cynic Cafe" />
+    <meta
+      property="og:description"
+      content="A categorized overview of the self-hosted services behind Cynic Cafe."
+    />
+    <meta
+      property="og:image"
+      content="https://www.cyniccafe.top/assets/favicon-512x512.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a class="brand" href="/" aria-label="Cynic Cafe Home">Cynic Cafe</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="homelab.html" aria-current="page">What I run</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main" role="main">
+      <section class="page-header" aria-labelledby="homelab-title">
+        <div class="container">
+          <h1 id="homelab-title">What I run at home</h1>
+          <p class="lead">
+            A small fleet of self-hosted services on a single Debian host,
+            wired like it matters.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="arch-title">
+        <div class="container">
+          <h2 id="arch-title">How it's wired</h2>
+          <p>
+            Everything sits behind a reverse proxy that terminates HTTPS and
+            talks to a private mesh network, so nothing binds to the public
+            internet. A single sign-on provider fronts the apps that need auth;
+            a secrets manager injects credentials at runtime; a cron-driven
+            backup job keeps the data safe; and a self-hosted bot proposes image
+            updates via pull requests. It's a modest stack, but it's wired like
+            it matters.
+          </p>
+          <ul class="card-grid" aria-label="Service categories">
+            <li class="card">
+              <h3>Identity &amp; SSO</h3>
+              <p>
+                One OIDC provider fronts the apps that need accounts, so a
+                single login carries across the services I actually use.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Reverse proxy &amp; networking</h3>
+              <p>
+                HTTPS termination with automatic wildcard certs, routing only
+                over a private mesh. No service exposes a public port.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Code &amp; CI</h3>
+              <p>
+                Self-hosted git hosting plus a container-native CI runner, with
+                an automated bot opening update pull requests.
+              </p>
+            </li>
+            <li class="card">
+              <h3>AI</h3>
+              <p>
+                A local LLM web UI paired with an embedding model for the bits
+                of inference I'd rather keep on my own hardware.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Apps &amp; feeds</h3>
+              <p>
+                Recipes, RSS, a private search engine, and a dashboard
+                launchpad &mdash; the daily-driver tools that replaced their
+                cloud equivalents.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Observability</h3>
+              <p>
+                A host-native metrics agent with first-class container views,
+                plus an error-tracking sink for the apps that report crashes.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Backups</h3>
+              <p>
+                A network-isolated, read-only backup container snapshots
+                bind-mounted data on a schedule to a local restic repo.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Secrets</h3>
+              <p>
+                All credentials live in a dedicated secrets manager and are
+                injected into containers at runtime &mdash; never committed,
+                never on disk in plaintext.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <small>&copy; <span id="year"></span> Cynic Cafe</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

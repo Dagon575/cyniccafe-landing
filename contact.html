@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact &mdash; Cynic Cafe</title>
+    <meta
+      name="description"
+      content="How to reach the person behind Cynic Cafe."
+    />
+    <link rel="canonical" href="https://www.cyniccafe.top/contact.html" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta name="color-scheme" content="dark light" />
+    <link
+      rel="icon"
+      href="/assets/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:site_name" content="Cynic Cafe" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.cyniccafe.top/contact.html" />
+    <meta property="og:title" content="Contact — Cynic Cafe" />
+    <meta
+      property="og:description"
+      content="How to reach the person behind Cynic Cafe."
+    />
+    <meta
+      property="og:image"
+      content="https://www.cyniccafe.top/assets/favicon-512x512.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a class="brand" href="/" aria-label="Cynic Cafe Home">Cynic Cafe</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="homelab.html">What I run</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main" role="main">
+      <section class="page-header" aria-labelledby="contact-title">
+        <div class="container">
+          <h1 id="contact-title">Contact</h1>
+          <p class="lead">No form, no tracker, no newsletter. Just a link.</p>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="how-title">
+        <h2 id="how-title" class="visually-hidden">How to reach me</h2>
+        <div class="container">
+          <p>
+            Find me on
+            <a
+              href="https://github.com/dagon575"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >. That's the public inbox. Anything inside the homelab stays
+            inside the homelab.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <small>&copy; <span id="year"></span> Cynic Cafe</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

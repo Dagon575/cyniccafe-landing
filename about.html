@@ -47,10 +47,10 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="about.html" aria-current="page">About</a></li>
-            <li><a href="/#gallery">Gallery</a></li>
-            <li><a href="/#news">News</a></li>
-            <li><a href="/#links">Links</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="homelab.html">What I run</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -73,6 +73,39 @@
             platitudes, the door's over there. If you came for sharp edges,
             late-night thoughts, and the sort of honesty that pairs well with a
             bitter roast, you're in the right place.
+          </p>
+
+          <h2 id="about-homelab">The homelab behind the name</h2>
+          <p>
+            This site is the public front door for a personal homelab &mdash; a
+            single Debian host running a small fleet of self-hosted services in
+            containers. The interesting parts are on the
+            <a href="homelab.html">What I run</a> page, but the short version: a
+            reverse proxy handles HTTPS, a private mesh network keeps everything
+            off the public internet, one sign-on provider covers the apps that
+            need accounts, and a secrets manager keeps credentials out of the
+            repo and out of plaintext.
+          </p>
+          <p>
+            It's not a data center. It's one box, a handful of containers, and a
+            stubborn refusal to hand my data to someone else's SaaS just because
+            the signup form was convenient. The coffee is strong, the takes are
+            stronger, and the uptime is &mdash; well, best-effort.
+          </p>
+
+          <h2 id="about-philosophy">Why self-host</h2>
+          <p>
+            Because "free" services cost you in data, lock-in, and the slow
+            erosion of owning your own tools. Because a container you control
+            beats a dashboard you don't. Because the best way to learn how
+            something works is to be the one responsible when it breaks at 2am.
+            And because, frankly, it's a fun excuse to write more YAML than any
+            reasonable person should.
+          </p>
+          <p>
+            The trade-offs are real: you are now the on-call, the security team,
+            and the backup strategy. The payoff is that the whole stack is
+            yours &mdash; auditable, portable, and answerable to nobody but you.
           </p>
         </div>
       </section>

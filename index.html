@@ -39,18 +39,17 @@
     <a class="skip-link" href="#home">Skip to content</a>
     <header class="site-header" role="banner">
       <div class="container">
-        <a class="brand" href="#home" aria-label="Cynic Cafe Home"
+        <a class="brand" href="/" aria-label="Cynic Cafe Home" aria-current="page"
           >Cynic Cafe</a
         >
         <nav class="site-nav" aria-label="Primary">
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="/" aria-current="page">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#homelab">What I run</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#links">Links</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="homelab.html">What I run</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -66,143 +65,45 @@
             takes.
           </p>
           <div class="hero-actions">
-            <a class="button-primary" href="#gallery">View Gallery</a>
-            <a class="button-secondary" href="#news">Latest Updates</a>
+            <a class="button-primary" href="homelab.html">What I run</a>
+            <a class="button-secondary" href="news.html">Latest Updates</a>
           </div>
         </div>
       </section>
 
-      <section
-        id="gallery"
-        class="content-section"
-        aria-labelledby="gallery-title"
-      >
+      <section class="content-section" aria-labelledby="explore-title">
         <div class="container">
-          <h2 id="gallery-title">Media Gallery</h2>
-          <p>
-            Photos and screenshots from the homelab, projects, and experiments
-            will live here over time.
-          </p>
-          <div class="gallery-grid" role="list" aria-label="Image gallery">
-            <!-- Add images to images/gallery/ and reference here -->
+          <h2 id="explore-title">Explore</h2>
+          <p>Pick a door. They're all unlocked from this side.</p>
+          <div class="card-grid teaser-grid" aria-label="Site sections">
+            <a class="teaser-card" href="about.html">
+              <h3>About</h3>
+              <p>What Cynic Cafe is, and why anyone would bother self-hosting.</p>
+            </a>
+            <a class="teaser-card" href="homelab.html">
+              <h3>What I run</h3>
+              <p>The services behind the name, by category &mdash; no product names, no internals.</p>
+            </a>
+            <a class="teaser-card" href="news.html">
+              <h3>News</h3>
+              <p>What's changed on the site and in the stack, newest first.</p>
+            </a>
+            <a class="teaser-card" href="links.html">
+              <h3>Links</h3>
+              <p>The short public list &mdash; and a note on what's kept private.</p>
+            </a>
+            <a class="teaser-card" href="contact.html">
+              <h3>Contact</h3>
+              <p>One link, no form, no tracker. GitHub is the inbox.</p>
+            </a>
           </div>
-        </div>
-      </section>
-
-      <section
-        id="homelab"
-        class="content-section"
-        aria-labelledby="homelab-title"
-      >
-        <div class="container">
-          <h2 id="homelab-title">What I run at home</h2>
-          <p>
-            This site fronts a personal homelab: a mix of self-hosted tools,
-            small services, and experiments that move around as ideas change.
-          </p>
-          <ul class="link-list">
-            <li>
-              <strong>Search &amp; discovery</strong> &mdash; self-hosted search
-              and content discovery for the things I actually care about.
-            </li>
-            <li>
-              <strong>Feeds &amp; reading</strong> &mdash; RSS and read-it-later
-              tools to keep noisy timelines at arm's length.
-            </li>
-            <li>
-              <strong>Dashboards</strong> &mdash; a private launchpad for
-              internal services, only reachable over VPN from trusted devices.
-            </li>
-            <li>
-              <strong>Automation &amp; monitoring</strong> &mdash; uptime
-              checks, metrics, and small scripts that keep the stack from
-              catching fire.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="news" class="content-section" aria-labelledby="news-title">
-        <div class="container">
-          <h2 id="news-title">News &amp; Updates</h2>
-          <article class="news-item" aria-labelledby="n3-title">
-            <h3 id="n3-title">Landing content refresh</h3>
-            <p>
-              <time datetime="2025-12-15">Dec 15, 2025</time> &mdash; Expanded
-              the homepage content, added a homelab overview, and cleaned up
-              public links.
-            </p>
-          </article>
-          <article class="news-item" aria-labelledby="n2-title">
-            <h3 id="n2-title">Custom domain wired up</h3>
-            <p>
-              <time datetime="2025-12-01">Dec 1, 2025</time> &mdash; Pointed
-              <code>cyniccafe.top</code> and <code>www.cyniccafe.top</code> at
-              the static site on GitHub Pages with HTTPS.
-            </p>
-          </article>
-          <article class="news-item" aria-labelledby="n1-title">
-            <h3 id="n1-title">Site initialized</h3>
-            <p>
-              <time datetime="2025-11-05">Nov 5, 2025</time> &mdash; First
-              version of the static homepage.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="links" class="content-section" aria-labelledby="links-title">
-        <div class="container">
-          <h2 id="links-title">Links</h2>
-          <ul class="link-list">
-            <li>
-              <a
-                href="https://github.com/Dagon575/cyniccafe-landing"
-                target="_blank"
-                rel="noopener noreferrer"
-                >cyniccafe-landing repo</a
-              >
-              <span class="note">Source for this static site.</span>
-            </li>
-            <li>
-              <a
-                href="http://dashy.home.cyniccafe.top"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Internal Dashy dashboard</a
-              >
-              <span class="note"
-                >Private homelab launchpad; reachable over Tailnet/VPN from
-                trusted devices (split DNS).</span
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section
-        id="contact"
-        class="content-section"
-        aria-labelledby="contact-title"
-      >
-        <div class="container">
-          <h2 id="contact-title">Contact</h2>
-          <p>
-            Find me on
-            <a
-              href="https://github.com/dagon575"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >.
-          </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <small>© <span id="year"></span> Cynic Cafe</small>
+        <small>&copy; <span id="year"></span> Cynic Cafe</small>
       </div>
     </footer>
 
