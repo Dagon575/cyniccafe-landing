@@ -6,7 +6,7 @@
     <title>News &amp; Updates &mdash; Cynic Cafe</title>
     <meta
       name="description"
-      content="Changelog of changes to the Cynic Cafe homelab and site."
+      content="Project milestones and site updates from Cynic Cafe."
     />
     <link rel="canonical" href="https://www.cyniccafe.top/news.html" />
     <meta name="theme-color" content="#0b0f14" />
@@ -24,7 +24,7 @@
     <meta property="og:title" content="News & Updates — Cynic Cafe" />
     <meta
       property="og:description"
-      content="Changelog of changes to the Cynic Cafe homelab and site."
+      content="Project milestones and site updates from Cynic Cafe."
     />
     <meta
       property="og:image"
@@ -61,7 +61,8 @@
         <div class="container">
           <h1 id="news-title">News &amp; Updates</h1>
           <p class="lead">
-            What's changed on the site and in the homelab behind it.
+            What's been built and shipped &mdash; not every commit, just the
+            milestones worth marking.
           </p>
         </div>
       </section>
@@ -69,53 +70,95 @@
       <section class="content-section" aria-labelledby="changelog-title">
         <h2 id="changelog-title" class="visually-hidden">Changelog</h2>
         <div class="container">
-          <article class="news-item" aria-labelledby="n6-title">
-            <h3 id="n6-title">Landing page rewrite</h3>
+          <article class="news-item" aria-labelledby="n10-title">
+            <h3 id="n10-title">Site redesign</h3>
             <p>
-              <time datetime="2026-08-07">Aug 7, 2026</time> &mdash; Rewrote the
-              "What I run" overview to reflect the real stack, split the site
-              into separate pages, and refreshed this changelog.
+              <time datetime="2026-08-07">Aug 7, 2026</time> &mdash; Split the
+              single-page site into focused pages, rewrote the "What I run"
+              overview, and trimmed the noise. Because scrolling is not a
+              personality.
+            </p>
+          </article>
+          <article class="news-item" aria-labelledby="n9-title">
+            <h3 id="n9-title">RecipeForge: GUI overhaul</h3>
+            <p>
+              <time datetime="2026-08-06">Aug 6, 2026</time> &mdash; Migrated all
+              7 pipeline stages to inline tabbed review, fixed three parser bugs
+              that were silently dropping ingredients, and made nutrition
+              enrichment always-on with a secured API key. The recipe tool now
+              has a GUI that doesn't hate you.
+            </p>
+          </article>
+          <article class="news-item" aria-labelledby="n8-title">
+            <h3 id="n8-title">RecipeForge: Desktop GUI shipped</h3>
+            <p>
+              <time datetime="2026-07-08">Jul 8, 2026</time> &mdash; Built the
+              full desktop interface: recipe browser, vocabulary editor,
+              field-diff review tools, import dialog, settings, error log, and
+              automatic database backups. Plus integration tests to keep it
+              honest.
+            </p>
+          </article>
+          <article class="news-item" aria-labelledby="n7-title">
+            <h3 id="n7-title">RecipeForge: Rewritten in Rust</h3>
+            <p>
+              <time datetime="2026-06-20">Jun 20, 2026</time> &mdash; Scraped the
+              Go prototype and rewrote the whole recipe pipeline in Rust with a
+              native desktop UI. Sometimes the second draft is the one that
+              ships.
+            </p>
+          </article>
+          <article class="news-item" aria-labelledby="n6-title">
+            <h3 id="n6-title">SlottsGameProject: Bevy rewrite shipped</h3>
+            <p>
+              <time datetime="2026-05-27">May 27, 2026</time> &mdash; Rewrote the
+              slot game from Phaser/TypeScript to Bevy/Rust, completing all 8
+              phases: foundation, game core, cascade &amp; spin, player systems,
+              UI, audio, device integration, and packaging. One language to rule
+              them all, fewer npm dependencies to mourn.
             </p>
           </article>
           <article class="news-item" aria-labelledby="n5-title">
-            <h3 id="n5-title">CI cache caps reworked</h3>
+            <h3 id="n5-title">SlottsGameProject: Phaser 4 release</h3>
             <p>
-              <time datetime="2026-08-05">Aug 5, 2026</time> &mdash; Raised the
-              build-cache caps to track real working-set size instead of
-              fighting it, and fixed a dry-run infinite loop in the cleanup
-              script.
+              <time datetime="2026-05-12">May 12, 2026</time> &mdash; Shipped
+              v0.4.0: scatter bonus mechanics, achievement system, pattern
+              unlock, UI overlays, and cross-platform desktop packaging. The
+              game finally had enough moving parts to call a game.
             </p>
           </article>
           <article class="news-item" aria-labelledby="n4-title">
-            <h3 id="n4-title">Metrics moved off Docker</h3>
+            <h3 id="n4-title">Homelab: Self-hosted CI brought online</h3>
             <p>
-              <time datetime="2026-07-31">Jul 31, 2026</time> &mdash; Migrated
-              the metrics agent from a container to a native systemd service for
-              direct host access, and removed the redundant exporters it had
-              replaced.
+              <time datetime="2026-05-11">May 11, 2026</time> &mdash; Stood up
+              self-hosted git hosting and a container-native CI runner, both
+              behind the single sign-on provider. No more trusting someone
+              else's build minutes.
             </p>
           </article>
           <article class="news-item" aria-labelledby="n3-title">
-            <h3 id="n3-title">Landing content refresh</h3>
+            <h3 id="n3-title">AI music workflows</h3>
             <p>
-              <time datetime="2025-12-15">Dec 15, 2025</time> &mdash; Expanded
-              the homepage content, added a homelab overview, and cleaned up
-              public links.
+              <time datetime="2026-05-08">May 8, 2026</time> &mdash; Built a
+              6-stage prompt-engineering pipeline for AI music generation in
+              ComfyUI. Because if the AI is going to write songs, it should at
+              least have a process.
             </p>
           </article>
           <article class="news-item" aria-labelledby="n2-title">
-            <h3 id="n2-title">Custom domain wired up</h3>
+            <h3 id="n2-title">Homelab: Single sign-on rolled out</h3>
             <p>
-              <time datetime="2025-12-01">Dec 1, 2025</time> &mdash; Pointed
-              <code>cyniccafe.top</code> and <code>www.cyniccafe.top</code> at
-              the static site on GitHub Pages with HTTPS.
+              <time datetime="2025-12-11">Dec 11, 2025</time> &mdash; One login
+              now carries across the recipe manager, RSS reader, and dashboard.
+              The days of memorizing a different password per service are over.
             </p>
           </article>
           <article class="news-item" aria-labelledby="n1-title">
-            <h3 id="n1-title">Site initialized</h3>
+            <h3 id="n1-title">Site launched</h3>
             <p>
-              <time datetime="2025-11-05">Nov 5, 2025</time> &mdash; First
-              version of the static homepage.
+              <time datetime="2025-12-01">Dec 1, 2025</time> &mdash; Pointed
+              <code>cyniccafe.top</code> at GitHub Pages, wired up HTTPS, and
+              called it a homepage.
             </p>
           </article>
         </div>
